@@ -47,15 +47,16 @@ public class SistemaInteraciones : MonoBehaviour
                 }
 
             }
+            else if (interacuableActual != null)
+            {
+
+                interacuableActual.GetComponent<Outline>().enabled = false;
+
+                interacuableActual = null;
+            }
 
         }
-        else if(interacuableActual != null)
-        {
-
-            interacuableActual.GetComponent<Outline>().enabled = false;
-
-            interacuableActual=null;
-        }
+        
 
     }
 }

@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b7047a97c2f804e801d10035097e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distaciaRayo: 2
+  distaciaRayo: 20
 --- !u!1 &1903700666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1477,7 @@ Transform:
   m_GameObject: {fileID: 8296172668581906053}
   serializedVersion: 2
   m_LocalRotation: {x: 1.21583745e-14, y: 1, z: 0.000000021855694, w: 0.0000005513429}
-  m_LocalPosition: {x: 20.76, y: 100.262184, z: 12.01}
+  m_LocalPosition: {x: 20.76, y: 100.262184, z: 9.9}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1598,6 +1598,7 @@ GameObject:
   - component: {fileID: 8296172668581906054}
   - component: {fileID: 8296172668581906055}
   - component: {fileID: 8296172668581906056}
+  - component: {fileID: 8296172668581906057}
   m_Layer: 0
   m_Name: AmmoBox
   m_TagString: Untagged
@@ -1612,7 +1613,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668581906053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -1656,6 +1657,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1250, y: 450, z: 750}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8296172668581906057
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668581906053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71ecd2bdfe998614e8b051d44de65c75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!33 &8587989075455061732
 MeshFilter:
   m_ObjectHideFlags: 0
