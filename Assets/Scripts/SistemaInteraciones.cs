@@ -9,7 +9,9 @@ public class SistemaInteraciones : MonoBehaviour
     [SerializeField] float distaciaRayo;
     CajaAmmo cajaMunicion;
     Transform interacuableActual;
+
     Color rayColor = Color.red;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,14 @@ public class SistemaInteraciones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Caja();
+    }
+    private void Caja()
+    {
         if ( Physics.Raycast (cam.transform.position, cam.transform.forward, out RaycastHit hit, distaciaRayo ) )
         {
-            Debug.DrawRay(cam.transform.position, cam.transform.forward*distaciaRayo, rayColor );
+            Debug.DrawRay(cam.transform.position, cam.transform.forward * distaciaRayo, rayColor );
 
             if (hit.transform.TryGetComponent(out CajaAmmo cajaMunicion ))
             {
@@ -32,16 +39,23 @@ public class SistemaInteraciones : MonoBehaviour
 
                 interacuableActual = cajaMunicion.transform;
 
-                cajaMunicion.GetComponent<Outline>().enabled = true;
+                interacuableActual.GetComponent<Outline>().enabled = true;
 
-
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    cajaMunicion.AbrirCaja();
+                }
 
             }
 
         }
-        else
+        else if(interacuableActual != null)
         {
-            cajaMunicion.GetComponent<Outline>().enabled = false;
+
+            interacuableActual.GetComponent<Outline>().enabled = false;
+
+            interacuableActual=null;
         }
+
     }
 }
