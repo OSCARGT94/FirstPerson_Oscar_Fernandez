@@ -44,6 +44,7 @@ public class SistemaInteraciones : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     cajaMunicion.AbrirCaja();
+
                 }
 
             }
