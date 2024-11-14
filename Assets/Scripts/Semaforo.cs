@@ -7,7 +7,11 @@ public class Semaforo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Coroutine semaforo = StartCoroutine(ejemploSemaforo());
+
+        //StopAllCoroutines();
+
+        StopCoroutine(semaforo);
     }
 
     // Update is called once per frame
@@ -15,10 +19,19 @@ public class Semaforo : MonoBehaviour
     {
         
     }
-    void ejemploSemaforo()
+    IEnumerator ejemploSemaforo()
     {
-        Debug.Log("Verde");
-        Debug.Log("Amarillo");
-        Debug.Log("Rojo");
+        while (true) 
+        {
+
+            Debug.Log("Verde");
+            yield return new WaitForSeconds(1);
+            Debug.Log("Amarillo");
+            yield return new WaitForSeconds(1);
+            Debug.Log("Rojo");
+            yield return new WaitForSeconds(1);
+
+        }
+
     }
 }
